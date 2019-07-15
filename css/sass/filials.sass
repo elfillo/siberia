@@ -1,0 +1,46 @@
+@import "variables"
+
+.filials
+  width: 1280px
+  margin: 0 auto
+  @media screen and (max-width: 1280px)
+    width: 100%
+  @media screen and (max-width: 420px)
+    margin-top: 20px
+  .items
+    width: 100%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    @media screen and (max-width: 1280px)
+      justify-content: space-around
+    .filial
+      width: 400px
+      margin-top: 50px
+      @media screen and (max-width: 420px)
+        width: 95%
+        margin: auto
+        margin-top: 20px
+      .img
+        width: 100%
+        height: 200px
+        overflow: hidden
+        img
+          width: auto
+          height: auto
+      .title
+        width: 100%
+        text-align: center
+        margin-top: 16px
+        margin-bottom: 0
+        font-weight: 300
+      p
+        display: block
+        width: 100%
+        margin-top: 10px
+      .button
+        width: 100%
+        display: flex
+        justify-content: center
+        margin-top: 30px
+

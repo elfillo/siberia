@@ -1,0 +1,151 @@
+@import "variables"
+
+.employee-cart
+  width: 1400px
+  height: auto
+  margin: 0 auto
+  display: flex
+  align-items: center
+  justify-content: space-between
+  @media screen and (max-width: 1400px)
+    width: 100%
+    padding: 0 15px
+  @media screen and (max-width: 1024px)
+    flex-direction: column
+    height: auto
+  .avatar
+    width: 500px
+    height: 100%
+    border: 1px solid $red
+    border-radius: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    @media screen and (max-width: 1024px)
+      width: 250px
+      height: 250px
+      margin-bottom: 15px
+    img
+      width: 100%
+      height: auto
+  .about
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    @media screen and (max-width: 1024px)
+      width: 100%
+      padding: 0 15px
+      align-items: center
+    .text
+      width: 80%
+      font-weight: 300
+      color: $textColor
+      @media screen and (max-width: 1024px)
+        width: 100%
+    .position
+      width: 40%
+      text-align: right
+      color: $red
+      margin-top: 90px
+      @media screen and (max-width: 1024px)
+        width: 80%
+        margin: 20px auto
+
+.employee-list
+  width: 100%
+  background: url("../img/filial.png")no-repeat center
+  background-size: cover
+  .items
+    width: 1050px
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    @media screen and (max-width: 1050px)
+      width: 100%
+      justify-content: center
+    .item
+      width: 245px
+      display: flex
+      flex-direction: column
+      align-items: center
+      .avatar
+        width: 148px
+        height: 151px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid $white
+        border-radius: 100%
+        overflow: hidden
+        img
+          width: 100%
+          height: auto
+      .name
+        width: 100%
+        text-align: center
+        color: $red
+        margin-top: 15px
+      .position
+        width: 100%
+        text-align: center
+        color: $white
+        margin: 15px auto
+.swiper-container
+  width: 1150px !important
+  padding: 0 50px !important
+  @media screen and (max-width: 1050px)
+    width: 100% !important
+    padding: 0 !important
+  .swiper-slide
+    display: flex
+    justify-content: center
+    .item
+      width: 245px
+      display: flex
+      flex-direction: column
+      align-items: center
+      .avatar
+        width: 148px
+        height: 151px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid $white
+        border-radius: 100%
+        overflow: hidden
+        img
+          width: 100%
+          height: auto
+      .name
+        width: 100%
+        text-align: center
+        color: $red
+        margin-top: 15px
+      .position
+        width: 100%
+        text-align: center
+        color: $white
+        margin: 15px auto
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next
+  background-image: url("../img/arrow.svg") !important
+  transform: rotate(180deg) !important
+  &:active
+    border: none !important
+    outline: none !important
+  &:focus
+    border: none !important
+    outline: none !important
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev
+  background-image: url("../img/arrow.svg") !important
+  &:active
+    border: none !important
+    outline: none !important
+  &:focus
+    border: none !important
+    outline: none !important
+
+

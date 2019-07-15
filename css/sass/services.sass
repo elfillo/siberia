@@ -1,0 +1,48 @@
+@import "variables"
+
+.services
+  width: 100%
+  height: auto
+  background: url("../img/filial.png")no-repeat center
+  background-size: cover
+  .items
+    width: 1200px
+    margin: auto
+    display: flex
+    justify-content: space-between
+    @media screen and (max-width: 1200px)
+      width: 100%
+      flex-wrap: wrap
+    @media screen and (max-width: 640px)
+      justify-content: center
+    .item
+      width: 250px
+      height: auto
+      padding: 15px 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      border: 1px solid inherit
+      cursor: pointer
+      &:hover
+        border: 1px solid $white
+      .icon
+        width: 150px
+        height: 150px
+        border: 1px solid $white
+        border-radius: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+          width: auto
+          height: auto
+      .text
+        span
+          display: block
+          color: $white
+          text-align: center
+          &:first-child
+            color: $red
+            margin-bottom: 18px
