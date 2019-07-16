@@ -59,11 +59,11 @@ function departments_metabox_callback($post){
     if ($departments) {
         foreach ($departments as $department) {
             if (in_array($department->ID, $departmentsIds)) {
-                echo '<input type="checkbox" value="'.$department->ID.'" checked  name="institutions_filters[]"/>';
+                echo '<input type="radio" value="'.$department->ID.'" checked  name="institutions_filters"/>';
                 echo '<span>'.$department->post_title.'</span>';
                 echo '<br>';
             } else {
-                echo '<input type="checkbox" value="'.$department->ID.'" name="institutions_filters[]"/>';
+                echo '<input type="radio" value="'.$department->ID.'" name="institutions_filters"/>';
                 echo '<span>'.$department->post_title.'</span>';
                 echo '<br>';
             }
@@ -98,26 +98,23 @@ function departments_save($post_id){
 
 add_action('save_post', 'departments_save');
 
-function get_employee($post_id){
-    $query = new WP_Query(array(
-        'post_type'=> 'employee',
-        'offset' => 0,
-        'posts_per_page' => -1,
-        'meta_key' => 'depart_id',
-        'meta_query' => array(
-            array(
-                'key' => 'depart_id',
-                'value' => array($post_id),
-                'compare' => 'IN',
-            )
-        )
-    ));
+function get_employee($post_ID){
+    $items = [];
 
-    if (!empty($query->posts)) {
-        return $query->posts;
-    } else {
-        return false;
+    $employees = query_posts('post_type=employee');
+
+    foreach ($employees as $employee){
+        $emp_depart_id = get_post_meta($employee->ID, 'depart_id', true);
+        $emp_depart_id = (int)$emp_depart_id;
+
+        if($emp_depart_id === $post_ID){
+            $items[] = $employee;
+        }
+
     }
+
+    return $items;
+
 }
 
 ?>

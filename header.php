@@ -19,7 +19,7 @@
                 <a href="#">Отзывы о реаблитиации</a>
             </div>
             <div class="info">
-                <p>Информация об организации</p>
+                <p><a href="/info/">Информация об организации</a></p>
                 <div class="social">
                     <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/icons/fb.png" alt="icon"></a>
                     <a href="#"><img src="<?php echo get_template_directory_uri() ?>/img/icons/inst.png" alt="icon"></a>
