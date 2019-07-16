@@ -1,9 +1,14 @@
 <?php
   $post = $wp_query->post;
  
-  if (is_singular('employee')) { //slug  категории
+    if (is_singular('employee')) {
       include(TEMPLATEPATH.'/single-info.php');
-  } else {
+    } else {
       include(TEMPLATEPATH.'/single-default.php');
-  }
+    }
+    if (is_singular('departments')) {
+        include(TEMPLATEPATH.'/single-uslugi.php');
+    } else {
+        include(TEMPLATEPATH.'/single-default.php');
+    }
 ?>

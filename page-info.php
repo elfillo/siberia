@@ -33,7 +33,7 @@
             <?php endforeach;?>
         </div>
     <?php endforeach;?>
-</section>
+    </section>
     <section class="post-list">
         <div class="title">Полезная информация для родителей и родственников </div>
         <?php if (have_posts()): query_posts('category_name=news'); while (have_posts()): the_post(); ?>

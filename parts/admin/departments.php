@@ -24,7 +24,7 @@ function register_departments() {
         'menu_icon' => 'dashicons-admin-multisite',
         'hierarchical' => false,
         'supports' => array(
-            'title', 'editor', 'comments', 'author',
+            'title', 'editor', 'comments', 'author', 'excerpt', 'thumbnail'
         ),
     ));
 }
