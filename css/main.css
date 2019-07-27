@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,6 +185,20 @@
     .main_list li:hover {
       border-bottom: 1px solid #c83948; }
 
+.nav_mobile {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center; }
+
 .banner {
   width: 100%;
   height: 620px;
@@ -239,7 +254,14 @@
             justify-content: space-around; } }
     .filials .items .filial {
       width: 400px;
-      margin-top: 50px; }
+      margin-top: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       @media screen and (max-width: 420px) {
         .filials .items .filial {
           width: 95%;
@@ -248,7 +270,8 @@
       .filials .items .filial .img {
         width: 100%;
         height: 200px;
-        overflow: hidden; }
+        overflow: hidden;
+        background-color: #00a0d2; }
         .filials .items .filial .img img {
           width: auto;
           height: auto; }
@@ -261,7 +284,7 @@
       .filials .items .filial p {
         display: block;
         width: 100%;
-        margin-top: 10px; }
+        margin: 15px auto; }
       .filials .items .filial .button {
         width: 100%;
         display: -webkit-box;
@@ -270,7 +293,7 @@
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        margin-top: 30px; }
+        margin-top: auto; }
 
 .textSection {
   width: 1280px;
@@ -454,6 +477,89 @@
         .post .text .bottom .button {
           margin-bottom: 20px;
           margin-top: 20px; } }
+
+.review_block {
+  margin-bottom: 25px; }
+  .review_block .text {
+    margin-bottom: 15px; }
+  .review_block .name {
+    width: 100%;
+    text-align: right;
+    color: #c83948; }
+
+.review_form {
+  width: 100%;
+  border: 2px solid #c83948;
+  padding: 10px; }
+  .review_form textarea {
+    width: 100%;
+    height: 270px;
+    padding: 10px;
+    border: 2px solid #c83948;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 15px; }
+  .review_form--name {
+    width: 367px;
+    height: 51px;
+    border: 2px solid #c83948;
+    padding: 10px;
+    color: #c83948;
+    font-size: 18px;
+    font-style: italic; }
+    @media screen and (max-width: 720px) {
+      .review_form--name {
+        width: 100%;
+        margin-bottom: 15px; } }
+  .review_form .bottom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+    .review_form .bottom .checkbox {
+      height: 100%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .review_form .bottom .checkbox input {
+        opacity: 0; }
+        .review_form .bottom .checkbox input:checked + label:before {
+          content: "✓"; }
+      .review_form .bottom .checkbox label {
+        padding-left: 10px;
+        position: relative; }
+        .review_form .bottom .checkbox label::before {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          color: #c83948;
+          content: "";
+          width: 15px;
+          height: 15px;
+          border: 1px solid #c83948;
+          position: absolute;
+          top: 4px; }
+  .review_form--submit {
+    width: 247px;
+    height: 57px;
+    border: 2px solid #c83948;
+    text-transform: uppercase;
+    color: #c83948;
+    font-size: 18px;
+    background-color: #fff;
+    margin-left: auto; }
 
 .employee-cart {
   width: 1400px;
@@ -764,6 +870,9 @@
 
 body, html {
   font-family: "Open Sans", sans-serif; }
+
+.active {
+  border-bottom: 1px solid #c83948; }
 
 .container {
   width: 1920px;

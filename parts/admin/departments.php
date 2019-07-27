@@ -110,11 +110,58 @@ function get_employee($post_ID){
         if($emp_depart_id === $post_ID){
             $items[] = $employee;
         }
-
     }
-
     return $items;
+}
+
+function depart_program_callback($post){
+
+    $program = get_post_meta($post->ID, 'depart_program', true);
+
+    wp_editor($program, 'depart_program_data', array(
+        'wpautop'       => 1,
+        'media_buttons' => 1,
+        'textarea_name' => 'depart_program_data', //нужно указывать!
+        'textarea_rows' => 20,
+        'tabindex'      => null,
+        'editor_css'    => '',
+        'editor_class'  => '',
+        'teeny'         => 0,
+        'dfw'           => 0,
+        'tinymce'       => 1,
+        'quicktags'     => 1,
+        'drag_drop_upload' => false
+    ) );
+
 
 }
+
+function init_program() {
+    add_meta_box(
+        'depart_program',
+        'Программа',
+        'depart_program_callback',
+        ['departments'],
+        'advanced',
+        'high'
+    );
+}
+
+add_action('add_meta_boxes', 'init_program');
+
+function depart_program_save($post_id){
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {return;}
+    if (!current_user_can('edit_post', $post_id)) {return;}
+
+    $program = $_POST['depart_program_data'];
+
+
+    if($program){
+        update_post_meta($post_id, 'depart_program', $program);
+    }
+
+}
+
+add_action('save_post', 'depart_program_save');
 
 ?>

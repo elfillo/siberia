@@ -16,7 +16,7 @@
                 Телефон реаблитационного центра “Здоровая сибирь” <a href="tel:+73952954321">8(3952)95-43-21</a>
             </div>
             <div class="review">
-                <a href="#">Отзывы о реаблитиации</a>
+                <a href="/otzyvy/">Отзывы о реаблитиации</a>
             </div>
             <div class="info">
                 <p><a href="/info/">Информация об организации</a></p>
@@ -39,6 +39,10 @@
             </div>
             <div class="burger"><span></span><span></span><span></span></div>
         </div>
-        <div class="header_mobile"></div>
+        <div class="header_mobile">
+            <div class="nav_mobile">
+                <?php wp_nav_menu(array('theme_location'=>'Mobile', 'menu_class'=>'nav_mobile--list') );?>
+            </div>
+        </div>
     </header>
 

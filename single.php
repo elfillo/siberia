@@ -7,7 +7,7 @@
       include(TEMPLATEPATH.'/single-default.php');
     }
     if (is_singular('departments')) {
-        include(TEMPLATEPATH.'/single-uslugi.php');
+        include(TEMPLATEPATH.'/single-departments.php');
     } else {
         include(TEMPLATEPATH.'/single-default.php');
     }

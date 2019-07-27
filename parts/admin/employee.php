@@ -38,8 +38,6 @@ function employee_position_callback($post){
     echo '<textarea style="width: 100%" rows="4" name="position" required value="'.($position ? $position : "").'" />'
 
         . $position.'</textarea>';
-
-
 }
 
 function init_employee_position() {
@@ -68,6 +66,5 @@ function employee_position_save($post_id){
 }
 
 add_action('save_post', 'employee_position_save');
-
 
 ?>

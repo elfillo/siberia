@@ -66,3 +66,70 @@
         @media screen and (max-width: 1024px)
           margin-bottom: 20px
           margin-top: 20px
+.review_block
+  margin-bottom: 25px
+  .text
+    margin-bottom: 15px
+  .name
+    width: 100%
+    text-align: right
+    color: $red
+.review_form
+  width: 100%
+  border: 2px solid $red
+  padding: 10px
+  textarea
+    width: 100%
+    height: 270px
+    padding: 10px
+    border: 2px solid $red
+    font-size: 18px
+    font-style: italic
+    margin-bottom: 15px
+  &--name
+    width: 367px
+    height: 51px
+    border: 2px solid $red
+    padding: 10px
+    color: $red
+    font-size: 18px
+    font-style: italic
+    @media screen and (max-width: 720px)
+      width: 100%
+      margin-bottom: 15px
+  .bottom
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    .checkbox
+      height: 100%
+      align-items: center
+      input
+        opacity: 0
+        &:checked + label:before
+          content: '✓'
+      label
+        padding-left: 10px
+        position: relative
+        &::before
+          display: flex
+          justify-content: center
+          align-items: center
+          color: $red
+          content: ''
+          width: 15px
+          height: 15px
+          border: 1px solid $red
+          position: absolute
+          top: 4px
+
+  &--submit
+    width: 247px
+    height: 57px
+    border: 2px solid $red
+    text-transform: uppercase
+    color: $red
+    font-size: 18px
+    background-color: $white
+    margin-left: auto

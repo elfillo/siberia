@@ -44,6 +44,12 @@ $(document).ready(function(){
         }
     });
 });
+//active link
+$(function () {
+    $(".main_list li a").each(function () {
+        window.location.href == this.href && $(this).addClass("active");
+    })
+});
 //open modal window
 /*$(document).ready(function(){
     $('.btn').click(function () {

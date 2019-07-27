@@ -18,6 +18,7 @@ function enqueue_script(){
 add_action('wp_enqueue_scripts', 'enqueue_script');
 //header_menu
 register_nav_menu('Header', 'Меню хэдера');
+register_nav_menu('Mobile', 'Мобильное меню');
 
 //add thumbnails
 add_theme_support( 'post-thumbnails' );
