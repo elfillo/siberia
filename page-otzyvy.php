@@ -7,17 +7,6 @@
                 <div class="name"><?php the_title()?></div>
             </div>
         <?php endwhile; endif;?>
-<!--        <div class="review_form">-->
-<!--            <textarea placeholder="Напишите свой отзыв о реаблитиационном центре в Иркутске “Здоровая Сибирь”"></textarea>-->
-<!--            <input class="review_form--name" type="text" placeholder="Представьтесь для публикации">-->
-<!--            <div class="bottom">-->
-<!--                <div class="checkbox">-->
-<!--                    <input type="checkbox" id="review_confirm">-->
-<!--                    <label for="review_confirm">Я подтверждаю своё согласие на публикацию моего мнения</label>-->
-<!--                </div>-->
-<!--                <input class="review_form--submit" type="submit" value="оставить отзыв">-->
-<!--            </div>-->
-<!--        </div>-->
         <?php echo do_shortcode('[contact-form-7 id="87" title="Форма для отзывов"]')?>
     </section>
 <?php get_footer(); ?>
