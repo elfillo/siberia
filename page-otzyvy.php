@@ -9,4 +9,15 @@
         <?php endwhile; endif;?>
         <?php echo do_shortcode('[contact-form-7 id="87" title="Форма для отзывов"]')?>
     </section>
+    <section class="textSection">
+        <?php
+        if ( have_posts() ){
+            while ( have_posts() ){ the_post();
+                echo the_content();
+            }
+        } else {
+            echo wpautop( 'Постов для вывода не найдено.' );
+        }
+        ?>
+    </section>
 <?php get_footer(); ?>
