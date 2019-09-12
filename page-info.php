@@ -43,7 +43,7 @@
                 </div>
                 <div class="text">
                     <div class="title"><?php the_title()?></div>
-                    <div class="content"><?php the_content()?></div>
+                    <div class="content"><?php the_excerpt()?></div>
                     <div class="bottom">
                         <div class="date"><?php the_date()?></div>
                         <div class="button">
