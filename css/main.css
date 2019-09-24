@@ -607,7 +607,7 @@
         margin-bottom: 15px; } }
     .employee-cart .avatar img {
       width: 100%;
-      height: auto; }
+      height: 100%; }
   .employee-cart .about {
     width: 50%;
     display: -webkit-box;
@@ -694,7 +694,7 @@
         overflow: hidden; }
         .employee-list .items .item .avatar img {
           width: 100%;
-          height: auto; }
+          height: 100%; }
       .employee-list .items .item .name {
         width: 100%;
         text-align: center;
